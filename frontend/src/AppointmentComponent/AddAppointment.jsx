@@ -19,7 +19,6 @@ const AddAppointment = () => {
 
   const saveAppointment = (event) => {
     event.preventDefault();
-    fetch("http://localhost:9090/api/appointment/clint/add", {
     fetch("https://fml-frontend.vercel.app/api/appointment/clint/add", {
       method: "POST",
       headers: {

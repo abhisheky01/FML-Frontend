@@ -16,7 +16,7 @@ const AssignAppointment = () => {
 
   const retrieveAppointment = async () => {
     const response = await axios.get(
-      "http://localhost:9090/api/appointment/id?appointmentId=" + appointmentId
+      "https://fml-frontend.vercel.app/api/appointment/id?appointmentId=" + appointmentId
     );
     return response.data;
   };
@@ -41,7 +41,7 @@ const AssignAppointment = () => {
   }, []);
 
   const retrieveAllAdvocate = async () => {
-    const response = await axios.get("http://localhost:9090/api/advocate/all");
+    const response = await axios.get("https://fml-frontend.vercel.app/api/advocate/all");
     console.log(response.data);
     return response.data;
   };
@@ -53,7 +53,7 @@ const AssignAppointment = () => {
 
     axios
       .post(
-        "http://localhost:9090/api/appointment/admin/assign/advocate",
+        "https://fml-frontend.vercel.app/api/appointment/admin/assign/advocate",
         formData
       )
       .then((result) => {

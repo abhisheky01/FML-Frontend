@@ -20,7 +20,7 @@ const UserLoginForm = () => {
   const loginAction = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:9090/api/user/login", {
+    fetch("https://fml-frontend.vercel.app/api/user/login", {
       method: "POST",
       headers: {
         Accept: "application/json",

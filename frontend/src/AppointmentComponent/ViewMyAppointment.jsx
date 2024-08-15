@@ -290,13 +290,13 @@ const ViewMyAppointment = () => {
 
   const retrieveAllAppointments = async () => {
     const response = await axios.get(
-      "http://localhost:9090/api/appointment/clint/id?userId=" + user.id
+      "https://fml-frontend.vercel.app/api/appointment/clint/id?userId=" + user.id
     );
     return response.data;
   };
 
   const cancelAppointment = (appointmentId) => {
-    fetch("http://localhost:9090/api/appointment/clint/update", {
+    fetch("https://fml-frontend.vercel.app/api/appointment/clint/update", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -333,7 +333,7 @@ const ViewMyAppointment = () => {
     const isValid = validateCardDetails();
     if (!isValid) return;
 
-    await fetch("http://localhost:9090/api/appointment/clint/update", {
+    await fetch("https://fml-frontend.vercel.app/api/appointment/clint/update", {
       method: "POST",
       headers: {
         Accept: "application/json",

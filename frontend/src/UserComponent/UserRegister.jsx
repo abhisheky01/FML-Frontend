@@ -363,17 +363,17 @@ const UserRegister = () => {
 
   // Fetch data from APIs
   const retrieveAllGenders = async () => {
-    const response = await axios.get("http://localhost:9090/api/user/gender");
+    const response = await axios.get("https://fml-frontend.vercel.app/api/user/gender");
     return response.data;
   };
 
   const retrieveAllBloodGroups = async () => {
-    const response = await axios.get("http://localhost:9090/api/clint/bloodgroup/all");
+    const response = await axios.get("https://fml-frontend.vercel.app/api/clint/bloodgroup/all");
     return response.data;
   };
 
   const retrieveAllSpecialist = async () => {
-    const response = await axios.get("http://localhost:9090/api/advocate/specialist/all");
+    const response = await axios.get("https://fml-frontend.vercel.app/api/advocate/specialist/all");
     return response.data;
   };
 
@@ -417,7 +417,6 @@ const UserRegister = () => {
       !city ||
       !pincode ||
       !age ||
-      !sex ||
       !bloodGroup
     ) {
       toast.error("All fields are required!", {
@@ -468,7 +467,7 @@ const UserRegister = () => {
 
     if (!validateInputs()) return;
 
-    fetch("http://localhost:9090/api/user/register", {
+    fetch("https://fml-frontend.vercel.app/api/user/register", {
       method: "POST",
       headers: {
         Accept: "application/json",

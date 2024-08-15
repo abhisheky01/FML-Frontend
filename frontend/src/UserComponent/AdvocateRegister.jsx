@@ -34,13 +34,13 @@ const AdvocateRegister = () => {
   const [specialists, setSpecialists] = useState([]);
 
   const retrieveAllGenders = async () => {
-    const response = await axios.get("http://localhost:9090/api/user/gender");
+    const response = await axios.get("https://fml-frontend.vercel.app/api/user/gender");
     return response.data;
   };
 
   const retrieveAllSpecialist = async () => {
     const response = await axios.get(
-      "http://localhost:9090/api/advocate/specialist/all"
+      "https://fml-frontend.vercel.app/api/advocate/specialist/all"
     );
     return response.data;
   };
@@ -84,7 +84,7 @@ const AdvocateRegister = () => {
     formData.append("experience", user.experience);
 
     axios
-    .post("http://localhost:9090/api/advocate/register", formData)
+    .post("https://fml-frontend.vercel.app/api/advocate/register", formData)
     .then((result) => {
       if (result.status === 200) {
         toast.success("Advocate Registered Successfully!!!", {

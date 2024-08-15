@@ -5,7 +5,7 @@ const AdvocateCard = (Advocate) => {
     <div className="col">
       <div className="card border-color rounded-card card-hover product-card custom-bg h-100">
         <img
-          src={"http://localhost:9090/api/advocate/" + Advocate.item.doctorImage}
+          src={"https://fml-frontend.vercel.app/advocate/" + Advocate.item.doctorImage}
           className="card-img-top rounded mx-auto d-block m-2"
           alt="img"
           style={{

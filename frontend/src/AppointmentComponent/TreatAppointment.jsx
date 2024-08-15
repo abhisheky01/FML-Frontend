@@ -16,7 +16,7 @@ const TreatAppointment = () => {
   const [prescription, setPrescription] = useState("");
   
   const retrieveAppointment = async () => {
-    const response = await axios.get("http://localhost:9090/api/appointment/id?appointmentId="+appointmentId);
+    const response = await axios.get("https://fml-frontend.vercel.app/api/appointment/id?appointmentId="+appointmentId);
     return response.data;
   };
 
@@ -40,7 +40,7 @@ const TreatAppointment = () => {
     formData.append("status", status);
 
     axios
-      .post("http://localhost:9090/api/appointment/advocate/update", formData)
+      .post("https://fml-frontend.vercel.app/api/appointment/advocate/update", formData)
       .then((result) => {
         result.json().then((res) => {
           console.log(res);

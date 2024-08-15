@@ -17,13 +17,13 @@ const ViewAllUser = () => {
   }, []);
 
   const retrieveAllUser = async () => {
-    const response = await axios.get("http://localhost:9090/api/clint/all");
+    const response = await axios.get("https://fml-frontend.vercel.app/api/clint/all");
     console.log(response.data);
     return response.data;
   };
 
   const deleteUser = (userId) => {
-    fetch("http://localhost:9090/api/user/delete/id?userId=" + userId, {
+    fetch("https://fml-frontend.vercel.app/api/user/delete/id?userId=" + userId, {
       method: "GET",
       headers: {
         Accept: "application/json",

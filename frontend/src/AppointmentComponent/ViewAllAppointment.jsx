@@ -19,7 +19,7 @@ const ViewAllAppointment = () => {
 
   const retrieveAllAppointments = async () => {
     const response = await axios.get(
-      "http://localhost:9090/api/appointment/all"
+      "https://fml-frontend.vercel.app/api/appointment/all"
     );
     console.log(response.data);
     return response.data;

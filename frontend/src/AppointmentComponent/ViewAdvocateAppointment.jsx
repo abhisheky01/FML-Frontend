@@ -21,7 +21,7 @@ const ViewAdvocateAppointment = () => {
 
   const retrieveAllAppointments = async () => {
     const response = await axios.get(
-      "http://localhost:9090/api/appointment/advocate/id?advocateId="+advocate.id
+      "https://fml-frontend.vercel.app/api/appointment/advocate/id?advocateId="+advocate.id
     );
     console.log(response.data);
     return response.data;

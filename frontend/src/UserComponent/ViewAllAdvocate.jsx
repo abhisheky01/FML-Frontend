@@ -17,13 +17,13 @@ const ViewAllAdvocate = () => {
   }, []);
 
   const retrieveAllAdvocate = async () => {
-    const response = await axios.get("http://localhost:9090/api/advocate/all");
+    const response = await axios.get("https://fml-frontend.vercel.app/api/advocate/all");
     console.log(response.data);
     return response.data;
   };
 
   const deleteAdvocate = (AdvocateId) => {
-    fetch("http://localhost:9090/api/user/delete/id?userId=" + AdvocateId, {
+    fetch("https://fml-frontend.vercel.app/api/user/delete/id?userId=" + AdvocateId, {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -79,7 +79,7 @@ const ViewAllAdvocate = () => {
                         <img
                           
                           src={
-                            "http://localhost:9090/api/advocate/" + Advocate.doctorImage
+                            "https://fml-frontend.vercel.app/api/advocate/" + Advocate.doctorImage
                           }
                           class="img-fluid"
                           alt="product_pic"
